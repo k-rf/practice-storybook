@@ -1,0 +1,22 @@
+{
+  "name": "practice_storybook",
+  "remoteUser": "practice_storybook",
+  "dockerComposeFile": "./docker-compose.yaml",
+  "service": "web",
+  "postCreateCommand": "yarn install",
+  "workspaceFolder": "/workspaces",
+  "overrideCommand": true,
+  "extensions": [
+    "dbaeumer.vscode-eslint",
+    "eamodio.gitlens",
+    "esbenp.prettier-vscode",
+    "extr0py.vscode-relative-line-numbers",
+    "hbenl.vscode-test-explorer",
+    "irongeek.vscode-env",
+    "kavod-io.vscode-jest-test-adapter",
+    "mhutchie.git-graph",
+    "mutantdino.resourcemonitor",
+    "streetsidesoftware.code-spell-checker",
+    "yzhang.markdown-all-in-one"
+  ]
+}

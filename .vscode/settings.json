@@ -1,0 +1,20 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSaveMode": "modifications",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "files.associations": {
+    ".env*": "env"
+  },
+  "[markdown]": {
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": false,
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "[env]": {
+    "editor.defaultFormatter": "IronGeek.vscode-env"
+  }
+}

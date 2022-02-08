@@ -1,0 +1,35 @@
+version: '3.9'
+
+volumes:
+  bash_history:
+    name: ${BASH_HISTORY_VOLUME_NAME}
+  vscode_extensions:
+    name: ${VSCODE_EXTENSIONS_VOLUME_NAME}
+  node_modules:
+    name: ${NODE_MODULES_VOLUME_NAME}
+
+services:
+  web:
+    build:
+      context: .
+      args:
+        - USER=${REMOTE_USER}
+        - WORKSPACES=${WORKSPACES}
+        - HOME=${REMOTE_HOME}
+    container_name: ${CONTAINER_NAME}
+    working_dir: ${WORKSPACES}
+    user: ${REMOTE_USER}
+    tty: true
+    volumes:
+      - type: bind
+        source: ..
+        target: ${PROJECT_ROOT}
+      - type: volume
+        source: bash_history
+        target: /commandhistory
+      - type: volume
+        source: node_modules
+        target: ${WORKSPACES}/node_modules
+      - type: volume
+        source: vscode_extensions
+        target: ${HOME}/.vscode-server/extensions

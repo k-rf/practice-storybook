@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["src/*"],
+      "storybook-config": ["types/storybook-config"]
+    },
+    "typeRoots": ["types", "node_modules/@types"]
+  }
+}

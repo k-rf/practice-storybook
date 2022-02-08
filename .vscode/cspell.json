@@ -1,0 +1,16 @@
+{
+  "version": "0.2",
+  "gitignoreRoot": [".."],
+  "ignorePaths": ["/.devcontainer/", "/node_modules/"],
+  "words": [
+    "linebreak",
+    "Parens",
+    "prettierignore",
+    "Prettierrc",
+    "storyshots",
+    "testid",
+    "TTFB",
+    "vite",
+    "vitejs"
+  ]
+}
