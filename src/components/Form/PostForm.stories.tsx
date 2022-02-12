@@ -1,7 +1,7 @@
 import type { ComponentMeta, ComponentStoryObj } from '@storybook/react';
 import { within, userEvent, waitFor } from '@storybook/testing-library';
 
-import { PostForm } from './PostForm';
+import { PostForm } from '.';
 
 type Meta = ComponentMeta<typeof PostForm>;
 type Story = ComponentStoryObj<typeof PostForm>;
