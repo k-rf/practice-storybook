@@ -37,6 +37,7 @@
     "react-hook-form": "^7.26.1",
     "react-router": "^6.2.1",
     "react-router-dom": "^6.2.1",
+    "recoil": "^0.6.1",
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
