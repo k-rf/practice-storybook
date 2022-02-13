@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Form/PostForm 名を入力する 1`] = `
-Array [
+<form>
   <div
     className="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
     data-testid="test-family-name-field"
@@ -42,7 +42,7 @@ Array [
         </legend>
       </fieldset>
     </div>
-  </div>,
+  </div>
   <div
     className="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
     data-testid="test-first-name-field"
@@ -83,7 +83,7 @@ Array [
         </legend>
       </fieldset>
     </div>
-  </div>,
+  </div>
   <button
     className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root  css-sghohy-MuiButtonBase-root-MuiButton-root"
     disabled={false}
@@ -104,12 +104,12 @@ Array [
     type="button"
   >
     送信
-  </button>,
-]
+  </button>
+</form>
 `;
 
 exports[`Storyshots Form/PostForm 姓を入力する 1`] = `
-Array [
+<form>
   <div
     className="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
     data-testid="test-family-name-field"
@@ -150,7 +150,7 @@ Array [
         </legend>
       </fieldset>
     </div>
-  </div>,
+  </div>
   <div
     className="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
     data-testid="test-first-name-field"
@@ -191,7 +191,7 @@ Array [
         </legend>
       </fieldset>
     </div>
-  </div>,
+  </div>
   <button
     className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root  css-sghohy-MuiButtonBase-root-MuiButton-root"
     disabled={false}
@@ -212,12 +212,12 @@ Array [
     type="button"
   >
     送信
-  </button>,
-]
+  </button>
+</form>
 `;
 
 exports[`Storyshots Form/PostForm 姓名を入力し送信する 1`] = `
-Array [
+<form>
   <div
     className="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
     data-testid="test-family-name-field"
@@ -258,7 +258,7 @@ Array [
         </legend>
       </fieldset>
     </div>
-  </div>,
+  </div>
   <div
     className="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
     data-testid="test-first-name-field"
@@ -299,7 +299,7 @@ Array [
         </legend>
       </fieldset>
     </div>
-  </div>,
+  </div>
   <button
     className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root  css-sghohy-MuiButtonBase-root-MuiButton-root"
     disabled={false}
@@ -320,12 +320,12 @@ Array [
     type="button"
   >
     送信
-  </button>,
-]
+  </button>
+</form>
 `;
 
 exports[`Storyshots Form/PostForm 姓名を入力する 1`] = `
-Array [
+<form>
   <div
     className="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
     data-testid="test-family-name-field"
@@ -366,7 +366,7 @@ Array [
         </legend>
       </fieldset>
     </div>
-  </div>,
+  </div>
   <div
     className="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
     data-testid="test-first-name-field"
@@ -407,7 +407,7 @@ Array [
         </legend>
       </fieldset>
     </div>
-  </div>,
+  </div>
   <button
     className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root  css-sghohy-MuiButtonBase-root-MuiButton-root"
     disabled={false}
@@ -428,6 +428,6 @@ Array [
     type="button"
   >
     送信
-  </button>,
-]
+  </button>
+</form>
 `;

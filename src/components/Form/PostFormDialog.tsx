@@ -1,16 +1,7 @@
-import {
-  Dialog,
-  DialogActions,
-  DialogContent,
-  DialogProps,
-  DialogTitle,
-  styled,
-} from '@mui/material';
-import { MouseEventHandler, useState } from 'react';
-import { useForm } from 'react-hook-form';
-
 import { Button } from '../Elements/Button';
 import { TextField } from '../Elements/Field';
+
+import { FormDialog, SubmitHandler } from '.';
 
 type FormValues = {
   firstName: string;
@@ -22,29 +13,20 @@ type Props = {
 };
 
 export const PostFormDialog = (props: Props) => {
-  const [open, setOpen] = useState(false);
-  const methods = useForm<FormValues>();
-
-  const handleSubmit: MouseEventHandler<HTMLButtonElement> = (e) =>
-    methods.handleSubmit(async (value) => {
-      handleClose(e, 'escapeKeyDown');
-      props.onSubmit && props.onSubmit(value);
+  const handleSubmit: SubmitHandler<FormValues> = (methods) => (e) =>
+    methods.handleSubmit(async (v) => {
+      methods.reset({ familyName: '', firstName: '' });
+      methods.setOpen(false);
+      props.onSubmit && (await props.onSubmit(v));
     })(e);
 
-  const handleClose: Required<DialogProps>['onClose'] = (_e, reason) => {
-    switch (reason) {
-      case 'escapeKeyDown': {
-        setOpen(false);
-      }
-    }
-  };
-
   return (
-    <>
-      <Button onClick={() => setOpen((old) => !old)}>開く</Button>
-      <Dialog open={open} onClose={handleClose}>
-        <DialogTitle>フォーム</DialogTitle>
-        <StyledDialogContent>
+    <FormDialog<FormValues>
+      triggerButton={<Button>開く</Button>}
+      closeType='backdropClick'
+      title='フォーム'
+      content={(methods) => (
+        <>
           <TextField
             data-testid='test-first-name-field'
             registration={methods.register('firstName')}
@@ -55,19 +37,13 @@ export const PostFormDialog = (props: Props) => {
             registration={methods.register('familyName')}
             label='Family Name'
           />
-        </StyledDialogContent>
-        <DialogActions>
-          <Button onClick={handleSubmit}>送信</Button>
-        </DialogActions>
-      </Dialog>
-    </>
+        </>
+      )}
+      submitButton={(methods) => (
+        <Button variant='contained' onClick={handleSubmit(methods)}>
+          送信
+        </Button>
+      )}
+    />
   );
 };
-
-const StyledDialogContent = styled(DialogContent)(({ theme }) => {
-  return {
-    '&.MuiDialogContent-root': {
-      paddingTop: theme.spacing(1),
-    },
-  };
-});
