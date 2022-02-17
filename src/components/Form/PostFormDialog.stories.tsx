@@ -1,5 +1,5 @@
 import type { ComponentMeta, ComponentStoryObj } from '@storybook/react';
-import { userEvent, within, waitFor } from '@storybook/testing-library';
+import { userEvent, waitFor, within } from '@storybook/testing-library';
 
 import { PostFormDialog } from '.';
 
@@ -66,8 +66,8 @@ export const Send: Story = {
     await openDialog(canvasElement);
     await inputTextField(canvasElement, 'test-first-name-field', 'FirstName');
     await inputTextField(canvasElement, 'test-family-name-field', 'FamilyName');
-    await waitFor(async () => {
-      await userEvent.click(canvas.getByText('送信'));
+    await waitFor(() => {
+      return userEvent.click(canvas.getByText('送信'));
     });
   },
 };

@@ -1,7 +1,7 @@
 import type { Parameters } from '@storybook/addons';
 import { initialize, mswDecorator } from 'msw-storybook-addon';
 
-import { handlers } from '../src/mocks';
+import { handlers } from '../src/mocks/handlers';
 
 initialize();
 export const decorators = [mswDecorator];

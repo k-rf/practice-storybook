@@ -1,5 +1,5 @@
 import type { ComponentMeta, ComponentStoryObj } from '@storybook/react';
-import { within, userEvent, waitFor } from '@storybook/testing-library';
+import { userEvent, waitFor, within } from '@storybook/testing-library';
 
 import { PostForm } from '.';
 
@@ -86,8 +86,8 @@ export const Send: Story = {
       }
     );
 
-    await waitFor(async () => {
-      await userEvent.click(canvas.getByRole('button'));
+    await waitFor(() => {
+      return userEvent.click(canvas.getByRole('button'));
     });
   },
 };
