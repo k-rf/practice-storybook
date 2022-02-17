@@ -1,7 +1,7 @@
 {
   "name": "practice_storybook",
   "remoteUser": "practice_storybook",
-  "dockerComposeFile": "./docker-compose.yaml",
+  "dockerComposeFile": "../docker-compose.dev.yaml",
   "service": "web",
   "postCreateCommand": "yarn install",
   "workspaceFolder": "/workspaces",
