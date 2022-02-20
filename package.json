@@ -38,6 +38,7 @@
     "react-router": "^6.2.1",
     "react-router-dom": "^6.2.1",
     "recoil": "^0.6.1",
+    "uuid": "^8.3.2",
     "web-vitals": "^2.1.4",
     "zod": "^3.11.6"
   },
@@ -64,6 +65,7 @@
     "@types/react-dom": "^17.0.11",
     "@types/react-router": "^5.1.18",
     "@types/react-router-dom": "^5.3.3",
+    "@types/uuid": "^8.3.4",
     "@typescript-eslint/eslint-plugin": "^5.10.2",
     "@typescript-eslint/parser": "^5.10.2",
     "@vitejs/plugin-react": "^1.1.4",
