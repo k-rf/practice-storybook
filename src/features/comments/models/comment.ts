@@ -17,7 +17,7 @@ export class Comment {
 
   static of(propsOverridden?: Partial<Props>): Comment {
     return new Comment({
-      id: new CommentId('default'),
+      id: new CommentId(),
       body: new CommentBody('default'),
       ...propsOverridden,
     });

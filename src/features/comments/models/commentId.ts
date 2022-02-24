@@ -1,7 +1,3 @@
-export class CommentId {
-  constructor(readonly value: string) {}
+import { Uuid } from '~/libs/uuid';
 
-  equals(that: CommentId): boolean {
-    return this.value === that.value;
-  }
-}
+export class CommentId extends Uuid<'CommentId'> {}

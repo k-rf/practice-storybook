@@ -1,4 +1,7 @@
-export class ValueObject<T extends number | string | Date, U extends string> {
+export abstract class ValueObject<
+  T extends number | string | Date,
+  U extends string
+> {
   private valueObjectBrand!: U;
 
   readonly value: T;
