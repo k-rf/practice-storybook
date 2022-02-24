@@ -15,10 +15,7 @@ export const useCommentStore = () => {
     comments,
     addComment: useCallback(
       (comment: Comment) => {
-        setComments((old) => ({
-          ...old,
-          comments: old.concat(comment),
-        }));
+        setComments((old) => old.concat(comment));
       },
       [setComments]
     ),
