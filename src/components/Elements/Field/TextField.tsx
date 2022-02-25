@@ -3,7 +3,7 @@ import { UseFormRegisterReturn } from 'react-hook-form';
 
 type Props = Pick<
   TextFieldProps,
-  'onChange' | 'label' | 'error' | 'fullWidth' | 'autoFocus'
+  'onChange' | 'label' | 'error' | 'fullWidth' | 'autoFocus' | 'type'
 > & { registration: Partial<UseFormRegisterReturn> };
 
 export const TextField = (props: Props) => {

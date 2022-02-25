@@ -21,3 +21,8 @@ export const Error: Story = {
   ...Default,
   args: { ...Default.args, error: true },
 };
+
+export const Password: Story = {
+  ...Default,
+  args: { ...Default.args, type: 'password' },
+};
