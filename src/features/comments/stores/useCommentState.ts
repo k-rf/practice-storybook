@@ -13,13 +13,13 @@ export const useCommentStore = () => {
 
   return {
     comments,
-    addComment: useCallback(
+    add: useCallback(
       (comment: Comment) => {
         setComments((old) => old.concat(comment));
       },
       [setComments]
     ),
-    removeComment: useCallback(
+    remove: useCallback(
       (comment: Comment) => {
         setComments((old) => old.filter((o) => !o.equals(comment)));
       },

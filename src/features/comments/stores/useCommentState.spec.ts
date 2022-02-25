@@ -14,13 +14,13 @@ describe('useCommentState', () => {
     const comment = Comment.of();
 
     act(() => {
-      result.current.addComment(comment);
+      result.current.add(comment);
     });
 
     expect(result.current.comments).toStrictEqual([comment]);
 
     act(() => {
-      result.current.removeComment(comment);
+      result.current.remove(comment);
     });
 
     expect(result.current.comments).toStrictEqual([]);
