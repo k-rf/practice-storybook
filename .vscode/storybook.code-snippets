@@ -30,5 +30,16 @@
       "  $0",
       "}"
     ]
+  },
+  "Play Function": {
+    "scope": "typescriptreact",
+    "prefix": "play",
+    "body": [
+      "play: async ({ canvasElement }) => {",
+      "  const canvas = within(canvasElement);",
+      "",
+      "$0",
+      "},"
+    ]
   }
 }
