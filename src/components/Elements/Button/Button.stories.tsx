@@ -1,3 +1,4 @@
+import { Box, BoxProps } from '@mui/material';
 import type { ComponentStoryObj } from '@storybook/react';
 
 import { Button } from './Button';
@@ -23,4 +24,35 @@ export const Contained: Story = {
 export const Outlined: Story = {
   ...Default,
   args: { ...Default.args, variant: 'outlined' },
+};
+
+export const Disabled: Story = {
+  ...Default,
+  render: (args) => {
+    const boxProps: BoxProps = {
+      display: 'inline',
+      mr: (theme) => theme.spacing(2),
+    };
+
+    return (
+      <>
+        <Box {...boxProps}>
+          <Button {...args} variant='text'>
+            Text
+          </Button>
+        </Box>
+        <Box {...boxProps}>
+          <Button {...args} variant='outlined'>
+            Outlined
+          </Button>
+        </Box>
+        <Box {...boxProps}>
+          <Button {...args} variant='contained'>
+            Contained
+          </Button>
+        </Box>
+      </>
+    );
+  },
+  args: { ...Default.args, disabled: true },
 };
