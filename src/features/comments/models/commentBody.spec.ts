@@ -1,6 +1,6 @@
-import { CommentBody } from './commentBody';
-
 import { repeat } from '~/utils';
+
+import { CommentBody } from './commentBody';
 
 describe('CommentBody', () => {
   describe('constructor', () => {
