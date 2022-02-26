@@ -7,6 +7,7 @@ type Props = Pick<
   | 'className'
   | 'error'
   | 'fullWidth'
+  | 'helperText'
   | 'id'
   | 'InputLabelProps'
   | 'label'
