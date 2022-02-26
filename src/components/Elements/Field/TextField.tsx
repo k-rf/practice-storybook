@@ -3,11 +3,26 @@ import { UseFormRegisterReturn } from 'react-hook-form';
 
 type Props = Pick<
   TextFieldProps,
-  'onChange' | 'label' | 'error' | 'fullWidth' | 'autoFocus' | 'type'
+  | 'autoFocus'
+  | 'className'
+  | 'error'
+  | 'fullWidth'
+  | 'id'
+  | 'InputLabelProps'
+  | 'label'
+  | 'onChange'
+  | 'size'
+  | 'type'
 > & { registration: Partial<UseFormRegisterReturn> };
 
 export const TextField = (props: Props) => {
-  const { registration, ...others } = props;
+  const { registration, InputLabelProps, ...others } = props;
 
-  return <MuiTextField {...others} {...registration} />;
+  return (
+    <MuiTextField
+      {...others}
+      {...registration}
+      InputLabelProps={{ ...InputLabelProps, shrink: true }}
+    />
+  );
 };
