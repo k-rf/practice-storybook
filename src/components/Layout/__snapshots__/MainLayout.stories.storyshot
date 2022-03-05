@@ -1,26 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Layout/MainLayout Default 1`] = `
-Array [
-  <header
-    className="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionStatic css-q5498h-MuiPaper-root-MuiAppBar-root"
+<div
+  className="MuiBox-root css-1t1xp2a"
+>
+  <span
+    className="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-18lrjg1-MuiCircularProgress-root"
+    role="progressbar"
+    style={
+      Object {
+        "height": 120,
+        "width": 120,
+      }
+    }
   >
-    <div
-      className="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-1t29gy6-MuiToolbar-root"
+    <svg
+      className="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+      viewBox="22 22 44 44"
     >
-      <h5
-        className="MuiTypography-root MuiTypography-h5 css-ag7rrr-MuiTypography-root"
-      >
-        Practice Storybook
-      </h5>
-    </div>
-  </header>,
-  <div
-    className="css-t0051x"
-  >
-    <div>
-      Hello World
-    </div>
-  </div>,
-]
+      <circle
+        className="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+        cx={44}
+        cy={44}
+        fill="none"
+        r={20.2}
+        strokeWidth={3.6}
+        style={Object {}}
+      />
+    </svg>
+  </span>
+</div>
 `;
