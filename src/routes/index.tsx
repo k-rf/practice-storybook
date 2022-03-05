@@ -1,32 +1,26 @@
-import { Navigate, RouteObject, Outlet, useRoutes } from 'react-router-dom';
+import { RouteObject, useRoutes } from 'react-router-dom';
 
-import { MainLayout } from '~/components/Layout';
-import { CommentsRoutes } from '~/features/comments';
 import { Landing } from '~/features/misc';
+import { useAuth } from '~/libs/auth';
 
-const App = () => {
-  return (
-    <MainLayout>
-      <Outlet />
-    </MainLayout>
-  );
-};
+import { protectedRoutes } from './protected';
+import { publicRoutes } from './public';
 
 export const AppRoutes = () => {
-  const routes: RouteObject[] = [
-    { path: '/', element: <Landing /> },
+  const auth = useAuth();
+
+  const commonRoutes: RouteObject[] = [
     {
-      path: '/app',
-      element: <App />,
-      children: [
-        { path: 'comments', element: <CommentsRoutes /> },
-        { path: '', element: <Navigate to='comments' /> },
-        { path: '*', element: <Navigate to='.' /> },
-      ],
+      path: '/',
+      element: <Landing />,
     },
   ];
 
-  const element = useRoutes([...routes]);
+  console.log(auth);
+
+  const routes = auth.user ? protectedRoutes : publicRoutes;
+
+  const element = useRoutes([...routes, ...commonRoutes]);
 
   return <>{element}</>;
 };

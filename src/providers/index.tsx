@@ -1,9 +1,12 @@
+import { ThemeProvider } from '@mui/material';
 import { HelmetProvider } from 'react-helmet-async';
 import { QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
 import { BrowserRouter } from 'react-router-dom';
 import { RecoilRoot } from 'recoil';
 
+import { theme } from '~/constants/theme';
+import { AuthProvider } from '~/libs/auth';
 import { queryClient } from '~/libs/react-query';
 
 type Props = {
@@ -16,7 +19,11 @@ export const AppProvider = (props: Props) => {
       <HelmetProvider>
         <QueryClientProvider client={queryClient}>
           <ReactQueryDevtools />
-          <BrowserRouter>{props.children}</BrowserRouter>
+          <AuthProvider>
+            <BrowserRouter>
+              <ThemeProvider theme={theme}>{props.children}</ThemeProvider>
+            </BrowserRouter>
+          </AuthProvider>
         </QueryClientProvider>
       </HelmetProvider>
     </RecoilRoot>

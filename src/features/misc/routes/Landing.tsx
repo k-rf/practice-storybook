@@ -3,12 +3,17 @@ import { useNavigate } from 'react-router';
 
 import { Button } from '~/components/Elements/Button';
 import { Head } from '~/components/Head';
+import { useAuth } from '~/libs/auth';
 
 export const Landing = () => {
   const navigate = useNavigate();
+  const { user } = useAuth();
 
   const handleClick = () => {
-    navigate('/app/comments');
+    if (user) {
+      navigate('/app/comments');
+    }
+    navigate('/auth/login');
   };
 
   return (
