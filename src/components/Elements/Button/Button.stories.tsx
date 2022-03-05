@@ -26,33 +26,41 @@ export const Outlined: Story = {
   args: { ...Default.args, variant: 'outlined' },
 };
 
+const Buttons = (args: Story['args']) => {
+  const boxProps: BoxProps = {
+    display: 'inline',
+    mr: (theme) => theme.spacing(2),
+  };
+
+  return (
+    <>
+      <Box {...boxProps}>
+        <Button {...args} variant='text'>
+          Text
+        </Button>
+      </Box>
+      <Box {...boxProps}>
+        <Button {...args} variant='outlined'>
+          Outlined
+        </Button>
+      </Box>
+      <Box {...boxProps}>
+        <Button {...args} variant='contained'>
+          Contained
+        </Button>
+      </Box>
+    </>
+  );
+};
+
 export const Disabled: Story = {
   ...Default,
-  render: (args) => {
-    const boxProps: BoxProps = {
-      display: 'inline',
-      mr: (theme) => theme.spacing(2),
-    };
-
-    return (
-      <>
-        <Box {...boxProps}>
-          <Button {...args} variant='text'>
-            Text
-          </Button>
-        </Box>
-        <Box {...boxProps}>
-          <Button {...args} variant='outlined'>
-            Outlined
-          </Button>
-        </Box>
-        <Box {...boxProps}>
-          <Button {...args} variant='contained'>
-            Contained
-          </Button>
-        </Box>
-      </>
-    );
-  },
   args: { ...Default.args, disabled: true },
+  render: (args) => <Buttons {...args} />,
+};
+
+export const Loading: Story = {
+  ...Default,
+  args: { ...Default.args, isLoading: true },
+  render: (args) => <Buttons {...args} />,
 };

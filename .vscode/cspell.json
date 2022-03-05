@@ -3,6 +3,7 @@
   "gitignoreRoot": [".."],
   "ignorePaths": ["/.devcontainer/", "/node_modules/"],
   "words": [
+    "bgcolor",
     "hookform",
     "linebreak",
     "Parens",
