@@ -20,7 +20,7 @@ export default {
 } as Meta;
 
 export const Default: Story = {
-  argTypes: { onSuccess: { action: true } },
+  argTypes: { onSubmit: { action: true } },
 };
 
 export const OnlyMailAddress: Story = {

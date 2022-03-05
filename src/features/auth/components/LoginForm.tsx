@@ -16,7 +16,8 @@ const schema = z.object({
 });
 
 type LoginFormProps = {
-  onSuccess?: () => void;
+  isLoading?: boolean;
+  onSubmit?: (value: FormValues) => Promise<void>;
 };
 
 export const LoginForm = (props: LoginFormProps) => {
@@ -26,7 +27,7 @@ export const LoginForm = (props: LoginFormProps) => {
     return methods.handleSubmit(async (v) => {
       console.log(v, 'これ使って認証する');
       isValid && methods.reset();
-      props.onSuccess && (await props.onSuccess());
+      props.onSubmit && (await props.onSubmit(v));
     })(e);
   };
 
@@ -36,7 +37,7 @@ export const LoginForm = (props: LoginFormProps) => {
 
   return (
     <Form<FormValues>
-      options={{ mode: 'onBlur', criteriaMode: 'all' }}
+      options={{ mode: 'all', criteriaMode: 'all' }}
       schema={schema}
     >
       {(methods) => {
@@ -77,6 +78,7 @@ export const LoginForm = (props: LoginFormProps) => {
               <Button
                 variant='contained'
                 disabled={!methods.formState.isValid}
+                isLoading={props.isLoading}
                 onClick={handleSubmit(methods)}
               >
                 ログイン
