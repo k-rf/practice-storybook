@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-import { ValueObject } from '~/libs/value-object';
+import { ValueObject } from '~/utils/value-object';
 
 export class CommentBody extends ValueObject<string, 'CommentBody'> {
   constructor(value: string) {
