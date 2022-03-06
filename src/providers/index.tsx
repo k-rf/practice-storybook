@@ -6,7 +6,6 @@ import { BrowserRouter } from 'react-router-dom';
 import { RecoilRoot } from 'recoil';
 
 import { theme } from '~/constants/theme';
-import { AuthProvider } from '~/libs/auth';
 import { queryClient } from '~/libs/react-query';
 
 type Props = {
@@ -19,11 +18,9 @@ export const AppProvider = (props: Props) => {
       <HelmetProvider>
         <QueryClientProvider client={queryClient}>
           <ReactQueryDevtools />
-          <AuthProvider>
-            <BrowserRouter>
-              <ThemeProvider theme={theme}>{props.children}</ThemeProvider>
-            </BrowserRouter>
-          </AuthProvider>
+          <BrowserRouter>
+            <ThemeProvider theme={theme}>{props.children}</ThemeProvider>
+          </BrowserRouter>
         </QueryClientProvider>
       </HelmetProvider>
     </RecoilRoot>
