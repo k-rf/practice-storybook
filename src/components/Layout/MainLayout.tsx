@@ -1,24 +1,14 @@
-import { Box, Typography } from '@mui/material';
-import { styled } from '@mui/system';
+import { styled } from '@mui/material';
 
-import { useAuth } from '~/libs/auth';
+import { useAuth } from '~/features/auth';
 
-import { AppBar } from '../Elements/AppBar';
-import { Button } from '../Elements/Button';
 import { Head } from '../Head';
+import { HeaderWithLogout } from '../Header';
 
 type Props = {
   title?: string;
   children: React.ReactNode;
 };
-
-const StyledAppBar = styled(AppBar)(({ theme }) => {
-  return {
-    marginBottom: theme.spacing(2),
-    backgroundColor: 'black',
-    opacity: 0.7,
-  };
-});
 
 const Body = styled('div')(({ theme }) => {
   return {
@@ -28,22 +18,16 @@ const Body = styled('div')(({ theme }) => {
 });
 
 export const MainLayout = (props: Props) => {
-  const { user, logout } = useAuth();
+  const { user, logout, isLoggingOut } = useAuth();
 
   return (
     <>
       <Head title={props.title} />
-      <StyledAppBar>
-        <Typography variant='h5'>Practice Storybook</Typography>
-        {user && (
-          <>
-            <Box flexGrow={1}></Box>
-            <Button variant='outlined' onClick={() => logout()}>
-              ログアウト
-            </Button>
-          </>
-        )}
-      </StyledAppBar>
+      <HeaderWithLogout
+        isLogin={!!user}
+        isLoading={isLoggingOut}
+        onLogout={() => user && logout({ email: user.email })}
+      />
       <Body>{props.children}</Body>
     </>
   );
