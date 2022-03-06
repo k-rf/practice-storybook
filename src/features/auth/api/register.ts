@@ -1,13 +1,6 @@
 import { axios } from '~/libs/axios';
 
-import { UserResponse } from '../types';
-
-export type RegisterCredentialsDTO = {
-  email: string;
-  password: string;
-  firstName: string;
-  lastName: string;
-};
+import { RegisterCredentialsDTO, UserResponse } from '../types';
 
 export const register = (
   data: RegisterCredentialsDTO

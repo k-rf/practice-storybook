@@ -7,7 +7,7 @@ export const handlers = [
     return res(ctx.status(200), ctx.json({ message: 'Hello World!' }));
   }),
   rest.post('/auth/login', async (req, res, ctx) => {
-    await sleep(3000);
+    await sleep(2000);
 
     return res(
       ctx.status(201),
@@ -25,7 +25,7 @@ export const handlers = [
     );
   }),
   rest.get('/auth/me', async (req, res, ctx) => {
-    await sleep(3000);
+    await sleep(2000);
 
     return res(
       ctx.status(200),
@@ -38,5 +38,10 @@ export const handlers = [
         role: 'USER',
       })
     );
+  }),
+  rest.delete('/auth/logout', async (req, res, ctx) => {
+    await sleep(2000);
+
+    return res(ctx.status(200));
   }),
 ];

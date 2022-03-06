@@ -1,7 +1,7 @@
-import { RouteObject, useRoutes } from 'react-router-dom';
+import { Navigate, RouteObject, useRoutes } from 'react-router-dom';
 
+import { useAuth } from '~/features/auth';
 import { Landing } from '~/features/misc';
-import { useAuth } from '~/libs/auth';
 
 import { protectedRoutes } from './protected';
 import { publicRoutes } from './public';
@@ -14,9 +14,11 @@ export const AppRoutes = () => {
       path: '/',
       element: <Landing />,
     },
+    {
+      path: '*',
+      element: <Navigate to={auth.user ? '/app' : '/'} />,
+    },
   ];
-
-  console.log(auth);
 
   const routes = auth.user ? protectedRoutes : publicRoutes;
 

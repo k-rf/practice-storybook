@@ -25,7 +25,6 @@ export const LoginForm = (props: LoginFormProps) => {
     const isValid = methods.formState.isValid;
 
     return methods.handleSubmit(async (v) => {
-      console.log(v, 'これ使って認証する');
       isValid && methods.reset();
       props.onSubmit && (await props.onSubmit(v));
     })(e);

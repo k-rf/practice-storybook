@@ -1,2 +1,4 @@
 **/build
 **/*cache
+
+public/mockServiceWorker.js
