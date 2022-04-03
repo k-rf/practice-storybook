@@ -34,7 +34,7 @@ exports[`Storyshots Form/PostForm 名を入力する 1`] = `
         className="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
       >
         <legend
-          className="css-1z7n62"
+          className="css-1in441m"
         >
           <span>
             Family
@@ -75,7 +75,7 @@ exports[`Storyshots Form/PostForm 名を入力する 1`] = `
         className="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
       >
         <legend
-          className="css-1z7n62"
+          className="css-1in441m"
         >
           <span>
             First
@@ -142,7 +142,7 @@ exports[`Storyshots Form/PostForm 姓を入力する 1`] = `
         className="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
       >
         <legend
-          className="css-1z7n62"
+          className="css-1in441m"
         >
           <span>
             Family
@@ -183,7 +183,7 @@ exports[`Storyshots Form/PostForm 姓を入力する 1`] = `
         className="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
       >
         <legend
-          className="css-1z7n62"
+          className="css-1in441m"
         >
           <span>
             First
@@ -250,7 +250,7 @@ exports[`Storyshots Form/PostForm 姓名を入力し送信する 1`] = `
         className="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
       >
         <legend
-          className="css-1z7n62"
+          className="css-1in441m"
         >
           <span>
             Family
@@ -291,7 +291,7 @@ exports[`Storyshots Form/PostForm 姓名を入力し送信する 1`] = `
         className="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
       >
         <legend
-          className="css-1z7n62"
+          className="css-1in441m"
         >
           <span>
             First
@@ -358,7 +358,7 @@ exports[`Storyshots Form/PostForm 姓名を入力する 1`] = `
         className="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
       >
         <legend
-          className="css-1z7n62"
+          className="css-1in441m"
         >
           <span>
             Family
@@ -399,7 +399,7 @@ exports[`Storyshots Form/PostForm 姓名を入力する 1`] = `
         className="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
       >
         <legend
-          className="css-1z7n62"
+          className="css-1in441m"
         >
           <span>
             First

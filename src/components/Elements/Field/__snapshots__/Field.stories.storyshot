@@ -25,7 +25,7 @@ exports[`Storyshots Elements/Field Basic 1`] = `
       className="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
     >
       <legend
-        className="css-nnbavb"
+        className="css-hdw1oc"
       >
         <span
           className="notranslate"
@@ -63,7 +63,7 @@ exports[`Storyshots Elements/Field Error 1`] = `
       className="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
     >
       <legend
-        className="css-nnbavb"
+        className="css-hdw1oc"
       >
         <span
           className="notranslate"
@@ -101,7 +101,7 @@ exports[`Storyshots Elements/Field Focused 1`] = `
       className="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
     >
       <legend
-        className="css-nnbavb"
+        className="css-hdw1oc"
       >
         <span
           className="notranslate"
@@ -139,7 +139,7 @@ exports[`Storyshots Elements/Field Password 1`] = `
       className="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
     >
       <legend
-        className="css-nnbavb"
+        className="css-hdw1oc"
       >
         <span
           className="notranslate"

@@ -11,8 +11,7 @@
     "editor.unicodeHighlight.ambiguousCharacters": false,
     "editor.unicodeHighlight.invisibleCharacters": false,
     "editor.wordWrap": "on",
-    "editor.quickSuggestions": false,
-    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    "editor.quickSuggestions": false
   },
   "[env]": {
     "editor.defaultFormatter": "IronGeek.vscode-env"
