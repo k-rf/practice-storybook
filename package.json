@@ -19,6 +19,7 @@
   },
   "lint-staged": {
     "*.{tsx,ts,js}": [
+      "bash -c 'yarn check:type'",
       "prettier --write",
       "eslint --cache --fix"
     ],
