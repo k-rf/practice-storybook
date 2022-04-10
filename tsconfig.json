@@ -14,7 +14,7 @@
     "isolatedModules": true,
     "jsx": "react-jsx"
   },
-  "include": ["src", ".storybook", "vite-env.d.ts", "storyshots.spec.ts"],
+  "include": ["src", "node_modules/vite-plugin-pwa/client.d.ts"],
   "exclude": ["node_modules"],
   "extends": "./tsconfig.paths.json"
 }

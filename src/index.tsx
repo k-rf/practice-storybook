@@ -1,5 +1,7 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
+// eslint-disable-next-line import/no-unresolved
+import { registerSW } from 'virtual:pwa-register';
 
 import { App } from './App';
 // import { NODE_ENV } from './configs';
@@ -25,3 +27,4 @@ root.render(
 );
 
 reportWebVitals();
+registerSW();
