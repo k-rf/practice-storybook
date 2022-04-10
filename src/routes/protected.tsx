@@ -2,6 +2,7 @@ import { Navigate, Outlet, RouteObject } from 'react-router-dom';
 
 import { MainLayout } from '~/components/Layout';
 import { CommentsRoutes } from '~/features/comments';
+import { PokemonRoutes } from '~/features/pokemon';
 
 const App = () => {
   return (
@@ -17,7 +18,8 @@ export const protectedRoutes: RouteObject[] = [
     element: <App />,
     children: [
       { path: 'comments/*', element: <CommentsRoutes /> },
-      { path: '', element: <Navigate to='comments' /> },
+      { path: 'pokemon/*', element: <PokemonRoutes /> },
+      { path: '', element: <Navigate to='pokemon' /> },
       { path: '*', element: <Navigate to='.' /> },
     ],
   },

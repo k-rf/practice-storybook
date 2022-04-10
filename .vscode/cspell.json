@@ -4,6 +4,7 @@
   "ignorePaths": ["/.devcontainer/", "/node_modules/"],
   "words": [
     "bgcolor",
+    "bulbasaur",
     "hookform",
     "linebreak",
     "Parens",

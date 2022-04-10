@@ -44,4 +44,9 @@ export const handlers = [
 
     return res(ctx.status(200));
   }),
+  rest.get('/pokemon/bulbasaur', async (req, res, ctx) => {
+    await sleep(2000);
+
+    return res(ctx.status(200), ctx.json({ name: 'bulbasaur' }));
+  }),
 ];
