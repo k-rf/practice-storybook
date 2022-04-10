@@ -24,6 +24,31 @@ Jest に関しては高速化のために、 @swc/jest を利用しています�
 - Docker Desktop
 - Remote Container (VS Code Plugin)
 
+## PWA
+
+⚠️🚧 PWA はまだまだ調査中です。  
+インストールすることができたので、そのあたりについて記載しています。
+
+### インストールする
+
+ローカル環境で開発した Web アプリをインストールするためには、ビルドし、それを起動する必要があります。  
+そのため、まずは以下のコマンドを実行します。
+
+```bash
+yarn build
+yarn preview
+```
+
+ブラウザで開き、アドレスバーに表示されているインストールボタンをクリックし、インストールする。
+
+![Install PWA](docs/img/install-pwa.png)
+
+### アンインストールする
+
+![Uninstall PWA](docs/img/uninstall-pwa-1.png)
+
+![Uninstall PWA Confirmation](docs/img/uninstall-pwa-2.png)
+
 ## 実行例
 
 ### 開発モードでアプリを起動する
