@@ -14,7 +14,7 @@
     "isolatedModules": true,
     "jsx": "react-jsx"
   },
-  "include": ["src", "node_modules/vite-plugin-pwa/client.d.ts"],
+  "include": ["src", "test", "node_modules/vite-plugin-pwa/client.d.ts"],
   "exclude": ["node_modules"],
   "extends": "./tsconfig.paths.json"
 }
