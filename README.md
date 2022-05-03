@@ -21,7 +21,7 @@ Jest に関しては高速化のために、 @swc/jest を利用しています�
 ## 開発に必要なもの
 
 - WSL2
-- Docker Desktop
+- Docker
 - Remote Container (VS Code Plugin)
 
 ## PWA
